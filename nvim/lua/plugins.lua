@@ -6,8 +6,7 @@ require('packer').startup(function()
   use 'sheerun/vim-polyglot'
 
   -- color
-  use 'navarasu/onedark.nvim'
-
+use { "ellisonleao/gruvbox.nvim" }
   -- file tree
   use {
     'kyazdani42/nvim-tree.lua',
@@ -49,10 +48,54 @@ require('packer').startup(function()
 
   -- rails
   use "tpope/vim-rails"
+  use "tpope/vim-bundler"
+  use "tpope/vim-rbenv"
 
   -- tests
   use "vim-test/vim-test"
 
   -- tmux nav
   use "christoomey/vim-tmux-navigator"
+
+  -- statusline
+
+  use "nvim-lualine/lualine.nvim"
+
+  -- which-key
+  use {
+    "folke/which-key.nvim",
+     config = function()
+     require("which-key").setup {}
+    end
+  }
+
+-- sneak
+use "justinmk/vim-sneak"
+
+-- copilot
+use "github/copilot.vim"
+
+-- trouble
+use {
+  "folke/trouble.nvim",
+  requires = "kyazdani42/nvim-web-devicons",
+  config = function()
+    require("trouble").setup {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    }
+  end
+}
+
+-- lightbulb for code actions
+use {
+    'kosayoda/nvim-lightbulb',
+    requires = 'antoinemadec/FixCursorHold.nvim',
+}
+
+-- null-ls
+use "jose-elias-alvarez/null-ls.nvim"
+use "jose-elias-alvarez/nvim-lsp-ts-utils"
+
 end)

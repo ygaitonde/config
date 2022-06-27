@@ -8,18 +8,26 @@ vim.g.localleader = "\\"
 
 require('plugins')   -- Plugins
 
--- colorscheme
-require('onedark').setup {
-    style = 'darker'
-}
-require('onedark').load()
-
+-- theme
+vim.opt.background = "dark" -- or "light" for light mode
+vim.cmd([[colorscheme gruvbox]])
 
 -- comments
 require('Comment').setup()
 
+-- statusline
+require('lualine').setup {
+  
+}
+
+-- lightbulbs
+require('nvim-lightbulb').setup({autocmd = {enabled = true}})
+
 -- solargraph
 require'lspconfig'.solargraph.setup{}
+-- tsserver
+-- from https://jose-elias-alvarez.medium.com/configuring-neovims-lsp-client-for-typescript-development-5789d58ea9c
+require'lspconfig'.tsserver.setup{}
 
 -- indent lines
 vim.opt.list = true
@@ -45,6 +53,8 @@ configs.setup {
     max_file_lines = nil,
   }
 }
+
+require'nvim-tree'.setup{}
 
 -- IMPORTS
 require('vars')      -- Variables
