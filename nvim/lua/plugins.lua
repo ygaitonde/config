@@ -1,10 +1,7 @@
 local use = require('packer').use
-require('packer').startup(function()
-  use 'wbthomason/packer.nvim' -- Package manager
+require('packer').startup(function() use 'wbthomason/packer.nvim' -- Package manager
   use 'neovim/nvim-lspconfig' -- Collection of configurations for the built-in LSP client	
   use 'nvim-treesitter/nvim-treesitter'
-  use 'sheerun/vim-polyglot'
-
   -- color
 use { "ellisonleao/gruvbox.nvim" }
   -- file tree
@@ -37,9 +34,6 @@ use { "ellisonleao/gruvbox.nvim" }
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "hrsh7th/cmp-nvim-lsp"
 
-  -- snippets
-  use "L3MON4D3/LuaSnip"
-
   -- tags
   use "ludovicchabant/vim-gutentags"
   
@@ -48,8 +42,7 @@ use { "ellisonleao/gruvbox.nvim" }
 
   -- rails
   use "tpope/vim-rails"
-  use "tpope/vim-bundler"
-  use "tpope/vim-rbenv"
+  use "tpope/vim-sleuth"
 
   -- tests
   use "vim-test/vim-test"
@@ -61,32 +54,9 @@ use { "ellisonleao/gruvbox.nvim" }
 
   use "nvim-lualine/lualine.nvim"
 
-  -- which-key
-  use {
-    "folke/which-key.nvim",
-     config = function()
-     require("which-key").setup {}
-    end
-  }
 
 -- sneak
 use "justinmk/vim-sneak"
-
--- copilot
-use "github/copilot.vim"
-
--- trouble
-use {
-  "folke/trouble.nvim",
-  requires = "kyazdani42/nvim-web-devicons",
-  config = function()
-    require("trouble").setup {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-    }
-  end
-}
 
 -- lightbulb for code actions
 use {
@@ -94,8 +64,11 @@ use {
     requires = 'antoinemadec/FixCursorHold.nvim',
 }
 
--- null-ls
-use "jose-elias-alvarez/null-ls.nvim"
-use "jose-elias-alvarez/nvim-lsp-ts-utils"
+-- blame
+use "f-person/git-blame.nvim"
+
+use "AndrewRadev/splitjoin.vim"
+
+use "airblade/vim-gitgutter"
 
 end)

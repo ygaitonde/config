@@ -26,8 +26,8 @@ require('nvim-lightbulb').setup({autocmd = {enabled = true}})
 -- solargraph
 require'lspconfig'.solargraph.setup{}
 -- tsserver
--- from https://jose-elias-alvarez.medium.com/configuring-neovims-lsp-client-for-typescript-development-5789d58ea9c
 require'lspconfig'.tsserver.setup{}
+require'lspconfig'.ocamllsp.setup { on_attach = on_attach }
 
 -- indent lines
 vim.opt.list = true
