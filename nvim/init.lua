@@ -10,15 +10,10 @@ require('plugins')   -- Plugins
 
 -- theme
 vim.opt.background = "dark" -- or "light" for light mode
-vim.cmd([[colorscheme gruvbox]])
+vim.cmd([[colorscheme dracula]])
 
 -- comments
 require('Comment').setup()
-
--- statusline
-require('lualine').setup {
-  
-}
 
 -- lightbulbs
 require('nvim-lightbulb').setup({autocmd = {enabled = true}})
@@ -28,6 +23,8 @@ require'lspconfig'.solargraph.setup{}
 -- tsserver
 require'lspconfig'.tsserver.setup{}
 require'lspconfig'.ocamllsp.setup { on_attach = on_attach }
+require'lspconfig'.jedi_language_server.setup{}
+require'lspconfig'.clangd.setup{}
 
 -- indent lines
 vim.opt.list = true
@@ -54,7 +51,15 @@ configs.setup {
   }
 }
 
-require'nvim-tree'.setup{}
+require'nvim-tree'.setup{
+  renderer = {
+    icons = { 
+      show = {
+        folder_arrow = false,
+      },
+    },
+  },
+}
 
 -- IMPORTS
 require('vars')      -- Variables

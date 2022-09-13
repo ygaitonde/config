@@ -48,11 +48,14 @@ use { "ellisonleao/gruvbox.nvim" }
   use "vim-test/vim-test"
 
   -- tmux nav
-  use "christoomey/vim-tmux-navigator"
 
   -- statusline
 
-  use "nvim-lualine/lualine.nvim"
+-- if use nvim-web-devicons
+use {
+  'yamatsum/nvim-nonicons',
+  requires = {'kyazdani42/nvim-web-devicons'}
+}
 
 
 -- sneak
@@ -70,5 +73,17 @@ use "f-person/git-blame.nvim"
 use "AndrewRadev/splitjoin.vim"
 
 use "airblade/vim-gitgutter"
+
+use {
+  'glts/vim-radical',
+  requires = 'glts/vim-magnum'
+}
+
+use "jubnzv/virtual-types.nvim"
+
+use "christoomey/vim-tmux-navigator"
+
+use 'Mofiqul/dracula.nvim'
+
 
 end)

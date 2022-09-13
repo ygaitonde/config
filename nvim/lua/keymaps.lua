@@ -7,6 +7,12 @@ vim.keymap.set("n", '<leader>q', ':q<CR>')
 vim.keymap.set('n', '<ESC>', ':noh<CR>', { silent = true, remap = true })
 vim.keymap.set('n', '<leader>h', ':noh<CR>', { silent = true })
 
+-- vim.keymap.set("n", '<leader>z', ':TmuxNavigateUp<CR>', { silent = true })
+-- vim.keymap.set("n", '<C-j>', ':TmuxNavigateDown<CR>', { silent = true})
+-- vim.keymap.set("n", '<C-k>', ':TmuxNavigateUp<CR>', { silent = true })
+-- vim.keymap.set("n", '<C-l>', ':TmuxNavigateLeft<CR>', { silent = true})
+-- vim.keymap.set("n", '<C-h>', ':TmuxNavigateRight<CR>', { silent = true})
+
 -- telescope
 -- file pickers
 vim.keymap.set('n', '<leader>ff', function() require('telescope.builtin').find_files() end, { desc = 'Find Files' })
@@ -23,4 +29,5 @@ vim.keymap.set('n', '<leader>fu', function() require('telescope.builtin').grep_s
 
 -- trouble
 vim.keymap.set('n', '<leader>ca', function() vim.lsp.buf.code_action() end)
+
 
