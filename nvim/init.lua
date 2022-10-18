@@ -15,6 +15,7 @@ vim.cmd([[colorscheme dracula]])
 -- comments
 require('Comment').setup()
 
+
 -- lightbulbs
 require('nvim-lightbulb').setup({autocmd = {enabled = true}})
 
@@ -22,7 +23,7 @@ require('nvim-lightbulb').setup({autocmd = {enabled = true}})
 require'lspconfig'.solargraph.setup{}
 -- tsserver
 require'lspconfig'.tsserver.setup{}
-require'lspconfig'.ocamllsp.setup { on_attach = on_attach }
+require'lspconfig'.ocamllsp.setup { on_attach = require'virtualtypes'.on_attach }
 require'lspconfig'.jedi_language_server.setup{}
 require'lspconfig'.clangd.setup{}
 
