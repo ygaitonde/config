@@ -104,10 +104,10 @@ _G.packer_plugins = {
     path = "/Users/yashgaitonde/.local/share/nvim/site/pack/packer/start/cmp-path",
     url = "https://github.com/hrsh7th/cmp-path"
   },
-  ["dracula.nvim"] = {
+  ["filetype.nvim"] = {
     loaded = true,
-    path = "/Users/yashgaitonde/.local/share/nvim/site/pack/packer/start/dracula.nvim",
-    url = "https://github.com/Mofiqul/dracula.nvim"
+    path = "/Users/yashgaitonde/.local/share/nvim/site/pack/packer/start/filetype.nvim",
+    url = "https://github.com/nathom/filetype.nvim"
   },
   ["git-blame.nvim"] = {
     loaded = true,
@@ -124,10 +124,10 @@ _G.packer_plugins = {
     path = "/Users/yashgaitonde/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
-  ["lualine.nvim"] = {
+  ["leap.nvim"] = {
     loaded = true,
-    path = "/Users/yashgaitonde/.local/share/nvim/site/pack/packer/start/lualine.nvim",
-    url = "https://github.com/nvim-lualine/lualine.nvim"
+    path = "/Users/yashgaitonde/.local/share/nvim/site/pack/packer/start/leap.nvim",
+    url = "https://github.com/ggandor/leap.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -143,6 +143,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/yashgaitonde/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-nonicons"] = {
+    loaded = true,
+    path = "/Users/yashgaitonde/.local/share/nvim/site/pack/packer/start/nvim-nonicons",
+    url = "https://github.com/yamatsum/nvim-nonicons"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -214,15 +219,20 @@ _G.packer_plugins = {
     path = "/Users/yashgaitonde/.local/share/nvim/site/pack/packer/start/vim-rails",
     url = "https://github.com/tpope/vim-rails"
   },
+  ["vim-reason-plus"] = {
+    loaded = true,
+    path = "/Users/yashgaitonde/.local/share/nvim/site/pack/packer/start/vim-reason-plus",
+    url = "https://github.com/reasonml-editor/vim-reason-plus"
+  },
+  ["vim-repeat"] = {
+    loaded = true,
+    path = "/Users/yashgaitonde/.local/share/nvim/site/pack/packer/start/vim-repeat",
+    url = "https://github.com/tpope/vim-repeat"
+  },
   ["vim-sleuth"] = {
     loaded = true,
     path = "/Users/yashgaitonde/.local/share/nvim/site/pack/packer/start/vim-sleuth",
     url = "https://github.com/tpope/vim-sleuth"
-  },
-  ["vim-sneak"] = {
-    loaded = true,
-    path = "/Users/yashgaitonde/.local/share/nvim/site/pack/packer/start/vim-sneak",
-    url = "https://github.com/justinmk/vim-sneak"
   },
   ["vim-test"] = {
     loaded = true,

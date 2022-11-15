@@ -29,5 +29,9 @@ vim.keymap.set('n', '<leader>fu', function() require('telescope.builtin').grep_s
 
 -- trouble
 vim.keymap.set('n', '<leader>ca', function() vim.lsp.buf.code_action() end)
+vim.keymap.set('n', '<leader>h', function() vim.lsp.buf.hover() end)
+vim.keymap.set('n', 'gd', function() vim.lsp.buf.definition() end)
+vim.keymap.set('n', '<leader>r', function() vim.lsp.buf.references() end)
+vim.keymap.set('n', '<leader>cr', function() vim.lsp.buf.rename() end)
 
 

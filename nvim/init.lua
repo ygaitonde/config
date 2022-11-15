@@ -5,12 +5,27 @@
 -- is called; otherwise, it will default to "\"
 vim.g.mapleader = " "
 vim.g.localleader = "\\"
+vim.g.did_load_filetypes=1
+vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
+  vim.lsp.handlers.hover,
+  {border = 'rounded'}
+)
+
+require('leap').add_default_mappings()
 
 require('plugins')   -- Plugins
 
+require('filetype').setup({
+  overrides = {
+    extensions = {
+      re = "reason",
+    }
+  }
+})
+
 -- theme
 vim.opt.background = "dark" -- or "light" for light mode
-vim.cmd([[colorscheme dracula]])
+vim.cmd.colorscheme "catppuccin"
 
 -- comments
 require('Comment').setup()
@@ -42,6 +57,7 @@ require("indent_blankline").setup {
 local configs = require'nvim-treesitter.configs'
 configs.setup {
   ensure_installed = {'python', 'ruby', 'cpp'},
+  auto_install = true,
   highlight = {
     enable = true,
   },
@@ -49,10 +65,24 @@ configs.setup {
     enable = true,
     extended_mode = true,
     max_file_lines = nil,
-  }
+  },
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = '<CR>',
+      scope_incremental = '<CR>',
+      node_incremental = '<TAB>',
+      node_decremental = '<S-TAB>',
+    },
+  },
 }
 
 require'nvim-tree'.setup{
+  actions = {
+    open_file = {
+      quit_on_open = true,
+    },
+  },
   renderer = {
     icons = { 
       show = {

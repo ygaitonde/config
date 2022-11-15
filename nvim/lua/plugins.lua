@@ -62,7 +62,9 @@ use {
 
 
 -- sneak
-use "justinmk/vim-sneak"
+use "tpope/vim-repeat"
+use "ggandor/leap.nvim"
+
 
 -- lightbulb for code actions
 use {
@@ -86,7 +88,9 @@ use "jubnzv/virtual-types.nvim"
 
 use "christoomey/vim-tmux-navigator"
 
-use 'Mofiqul/dracula.nvim'
+use "nathom/filetype.nvim"
 
+use "reasonml-editor/vim-reason-plus" 
+use { "catppuccin/nvim", as = "catppuccin" }
 
 end)
