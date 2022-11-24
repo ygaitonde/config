@@ -5,3 +5,4 @@ gh/
 nvm/
 configstore/
 iterm2/
+nvim/plugin/packer_compiled.lua
