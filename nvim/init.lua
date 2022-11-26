@@ -4,6 +4,8 @@
 -- These keybindings need to be defined before the first
 -- is called; otherwise, it will default to "\"
 vim.g.mapleader = " "
+vim.opt.ignorecase=true;
+vim.opt.smartcase=true;
 vim.g.localleader = "\\"
 vim.g.did_load_filetypes=1
 vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
@@ -25,7 +27,7 @@ require('filetype').setup({
 
 -- theme
 vim.opt.background = "dark" -- or "light" for light mode
-vim.cmd.colorscheme "catppuccin"
+vim.cmd.colorscheme "gruvbox"
 
 -- comments
 require('Comment').setup()
