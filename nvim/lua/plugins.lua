@@ -92,5 +92,7 @@ use "nathom/filetype.nvim"
 
 use "reasonml-editor/vim-reason-plus" 
 use { "catppuccin/nvim", as = "catppuccin" }
+use "psliwka/vim-smoothie" 
+
 
 end)
