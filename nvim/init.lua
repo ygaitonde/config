@@ -43,7 +43,8 @@ require'lspconfig'.tsserver.setup{}
 require'lspconfig'.ocamllsp.setup { on_attach = require'virtualtypes'.on_attach }
 require'lspconfig'.jedi_language_server.setup{}
 require'lspconfig'.clangd.setup{}
-
+require'lspconfig'.rust_analyzer.setup{}
+require'lspconfig'.prolog_ls.setup{}
 -- indent lines
 vim.opt.list = true
 vim.opt.listchars:append("space:⋅")

@@ -15,13 +15,12 @@ vim.keymap.set('n', '<leader>h', ':noh<CR>', { silent = true })
 
 -- telescope
 -- file pickers
-vim.keymap.set('n', '<leader>ff', function() require('telescope.builtin').find_files() end, { desc = 'Find Files' })
-vim.keymap.set('n', '<leader>fg', function() require('telescope.builtin').live_grep() end, { desc = 'Live Grep' })
-vim.keymap.set('n', '<leader>fb', function() require('telescope.builtin').buffers() end, { desc = 'Find Buffers' })
+vim.keymap.set('n', '<leader>f', function() require('telescope.builtin').find_files() end, { desc = 'Find Files' })
+vim.keymap.set('n', '<leader>g', function() require('telescope.builtin').live_grep() end, { desc = 'Live Grep' })
+vim.keymap.set('n', '<leader>b', function() require('telescope.builtin').buffers() end, { desc = 'Find Buffers' })
 -- lsp/smart stuff
-vim.keymap.set('n', '<leader>fi', function() require('telescope.builtin').current_buffer_fuzzy_find() end, { desc = 'In Buffer' })
-vim.keymap.set('n', '<leader>fr', function() require('telescope.builtin').resume() end, { desc = 'In Buffer' })
-vim.keymap.set('n', '<leader>fu', function() require('telescope.builtin').grep_string() end, { desc = 'In Buffer' })
+vim.keymap.set('n', '<leader>l', function() require('telescope.builtin').resume() end, { desc = 'Previous' })
+vim.keymap.set('n', '<leader>u', function() require('telescope.builtin').grep_string() end, { desc = 'Grep Under Cursor' })
 
 
 -- format on save
