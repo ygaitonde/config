@@ -13,6 +13,7 @@ vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(
   {border = 'rounded'}
 )
 
+
 require('leap').add_default_mappings()
 
 require('plugins')   -- Plugins
@@ -45,6 +46,16 @@ require'lspconfig'.jedi_language_server.setup{}
 require'lspconfig'.clangd.setup{}
 require'lspconfig'.rust_analyzer.setup{}
 require'lspconfig'.prolog_ls.setup{}
+require'lspconfig'.hls.setup{}
+require'lspconfig'.rust_analyzer.setup{
+  settings = {
+    ['rust-analyzer'] = {
+      diagnostics = {
+        enable = false;
+      }
+    }
+  }
+}
 -- indent lines
 vim.opt.list = true
 vim.opt.listchars:append("space:⋅")
@@ -100,3 +111,4 @@ require('vars')      -- Variables
 require('opts')      -- Options
 require('comp') -- Completion
 require('keymaps')      -- Keymaps
+vim.g.ClangFormatAutoEnable = 1

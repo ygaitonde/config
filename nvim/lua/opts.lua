@@ -2,9 +2,11 @@
 vim.opt.number = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
+vim.opt.scrolloff = 999
 
 -- vim-test
 vim.g['test#strategy'] = "neovim"
+vim.g["gitblame_enabled"] = 0
 
 vim.api.nvim_set_keymap('n', '<leader>tn', '<cmd>TestNearest<CR>', { noremap = true, silent = true}) -- Test nearest test
 vim.api.nvim_set_keymap('n', '<leader>tf', '<cmd>TestFile<CR>', { noremap = true, silent = true}) -- Test file

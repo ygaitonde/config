@@ -93,5 +93,8 @@ use "nathom/filetype.nvim"
 use "reasonml-editor/vim-reason-plus" 
 use { "catppuccin/nvim", as = "catppuccin" }
 
+-- clang format
+use "rhysd/vim-clang-format"
+
 
 end)
