@@ -27,9 +27,6 @@ use { "ellisonleao/gruvbox.nvim" }
   -- blank lines
   use "lukas-reineke/indent-blankline.nvim"
 
-  -- bracket colorizer
-  use "p00f/nvim-ts-rainbow"
-
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- Completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
@@ -95,6 +92,8 @@ use { "catppuccin/nvim", as = "catppuccin" }
 
 -- clang format
 use "rhysd/vim-clang-format"
+
+use "github/copilot.vim"
 
 
 end)

@@ -22,6 +22,7 @@ require('filetype').setup({
   overrides = {
     extensions = {
       re = "reason",
+      h = "cpp"
     }
   }
 })
@@ -43,7 +44,15 @@ require'lspconfig'.solargraph.setup{}
 require'lspconfig'.tsserver.setup{}
 require'lspconfig'.ocamllsp.setup { on_attach = require'virtualtypes'.on_attach }
 require'lspconfig'.jedi_language_server.setup{}
-require'lspconfig'.clangd.setup{}
+require'lspconfig'.clangd.setup{
+	on_attach = on_attach,
+	cmd = {
+	    "clangd",
+	    "--offset-encoding=utf-16",
+	    "--clang-tidy"
+	},
+	filetypes = { "c", "cpp", "objc", "objcpp", "cuda", "proto", "h" }
+}
 require'lspconfig'.rust_analyzer.setup{}
 require'lspconfig'.prolog_ls.setup{}
 require'lspconfig'.hls.setup{}

@@ -1,10 +1,11 @@
 -- escape
-vim.keymap.set("n", '<leader>w', ':w<CR>')
+vim.keymap.set("n", '<leader>w', ':w!<CR>')
 vim.keymap.set("n", '<leader>q', ':q<CR>')
 
 -- hide highlight
 vim.keymap.set('n', '<ESC>', ':noh<CR>', { silent = true, remap = true })
 vim.keymap.set('n', '<leader>h', ':noh<CR>', { silent = true })
+vim.keymap.set('n', '<leader>e', ':lua vim.diagnostic.open_float(0, {scope="line"})<CR>', { silent = true })
 
 -- vim.keymap.set("n", '<leader>z', ':TmuxNavigateUp<CR>', { silent = true })
 -- vim.keymap.set("n", '<C-j>', ':TmuxNavigateDown<CR>', { silent = true})
